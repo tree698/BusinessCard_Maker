@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.module.css';
 import App from './app';
 import AuthService from './service/auth_service';
-import ImageFileInput from './components/image_file_input/imageFileInput';
+import ImageFileInput from './components/image_file_input/image_File_Input';
 import ImageUploader from './service/image_uploader';
 
 const authService = new AuthService();
