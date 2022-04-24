@@ -50,44 +50,44 @@ const CardAddForm = ({ FileInput, onAdd }) => {
         className={styles.input}
         type="text"
         name="name"
-        placeholder="name"
+        placeholder="Name"
       />
       <input
         ref={companyRef}
         className={styles.input}
         type="text"
         name="company"
-        placeholder="company"
+        placeholder="Company"
       />
       <select
         ref={themeRef}
         className={styles.select}
         name="theme"
-        placeholder="theme"
+        placeholder="Theme"
       >
-        <option value="dark">dark</option>
-        <option value="light">light</option>
-        <option value="colorful">colorful</option>
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="colorful">Colorful</option>
       </select>
       <input
         ref={titleRef}
         className={styles.input}
         type="text"
         name="title"
-        placeholder="title"
+        placeholder="Title"
       />
       <input
         ref={emailRef}
         className={styles.input}
         type="text"
         name="email"
-        placeholder="email"
+        placeholder="Email"
       />
       <textarea
         ref={messageRef}
         className={styles.textarea}
         name="message"
-        placeholder="message"
+        placeholder="Message"
       ></textarea>
       <div className={styles.fileInput}>
         <FileInput name={file.fileName} onFileChange={onFileChange} />
