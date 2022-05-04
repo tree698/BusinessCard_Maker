@@ -7,12 +7,12 @@ import Header from '../header/header';
 import styles from './maker.module.css';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
-  const navigate = useNavigate();
-  const navigateState = navigate?.location?.state;
+  const navigator = useNavigate();
+  const navigateState = navigator?.location?.state;
   const [userId, setUserId] = useState(navigateState && navigateState.id);
   const [cards, setCards] = useState({});
 
-  const navigator = useNavigate();
+  // const navigator = useNavigate();
   const onLogout = useCallback(() => {
     authService.logout();
   }, [authService]);
