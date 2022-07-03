@@ -2,18 +2,26 @@
 @value mediaQuery from '../../common/size.css';
 
 .maker {
-  width: 100%;
-  height: 100%;
-  max-width: 85rem;
+  width: 60%;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  background-color: makerWhite;
+  justify-content: center;
 }
 
 .container {
   display: flex;
   flex: 1;
+
+  /* 높이를 주어야 editor, preview에서 overflow-y 가능 */
+  /* 방법 1 */
+  /* height: 100%; */
   min-height: 0;
+
+  /* 방법 2 */
+  /* height: 80%; */
+
+  background-color: makerWhite;
 }
 
 @media screen and (max-width: mediaQuery) {

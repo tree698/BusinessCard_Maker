@@ -3,14 +3,28 @@
 .editor {
   flex-basis: 50%;
   border-right: 1px solid makerGrey;
-  padding: 0.5em 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow-y: auto;
 }
 
 .title {
   width: 100%;
   margin-bottom: 1em;
+  text-align: center;
   color: makerGreen;
   font-size: 2em;
-  text-align: center;
+}
+
+.ul {
+  width: 76%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.addForm {
+  width: 76%;
 }

@@ -1,29 +1,27 @@
-@value makerBlack, makerWhite from '../../common/colors.css';
+@value makerGreen, makerGrey from '../../common/colors.css';
 
 .form {
-  display: flex;
   width: 100%;
+  display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid makerBlack;
-  border-left: 1px solid makerBlack;
-  margin-bottom: 2em;
+  border-left: 1px solid makerGrey;
+  border-top: 1px solid makerGrey;
+  margin-bottom: 1em;
+}
+
+.input {
+  height: 2.4em;
 }
 
 .input,
 .textarea,
 .select,
 .fileInput {
-  font-size: 1em;
   width: 100%;
+  font-size: 1rem;
   border: 0;
-  padding: 0.5em;
-  border-bottom: 1px solid makerBlack;
-  border-right: 1px solid makerBlack;
-  background-color: makerWhite;
-}
-
-.textarea {
-  font-size: 1.2em;
+  border-right: 1px solid makerGrey;
+  border-bottom: 1px solid makerGrey;
 }
 
 .input,
@@ -33,8 +31,7 @@
 
 .input:focus,
 .textarea:focus,
-.select:focus,
-.button:focus {
+.select:focus {
   outline: 0;
 }
 
@@ -44,5 +41,4 @@
 
 .fileInput {
   flex: 1 1 50%;
-  padding: 0;
 }
