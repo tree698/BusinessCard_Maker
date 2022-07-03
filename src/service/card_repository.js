@@ -1,21 +1,26 @@
-import { firebaseDatabase } from './firebase';
+import { getDatabase, ref, remove, set, onValue, off } from 'firebase/database';
 
 class CardRepository {
-  syncCards(userId, onUpdate) {
-    const ref = firebaseDatabase.ref(`${userId}/cards`);
-    ref.on('value', (snapshot) => {
-      const value = snapshot.val();
-      value && onUpdate(value);
-    });
-    return () => ref.off();
+  constructor(app) {
+    this.db = getDatabase(app);
   }
 
   saveCard(userId, card) {
-    firebaseDatabase.ref(`${userId}/cards/${card.id}`).set(card);
+    set(ref(this.db, `${userId}/cards/${card.id}`), card);
   }
 
   removeCard(userId, card) {
-    firebaseDatabase.ref(`${userId}/cards/${card.id}`).remove();
+    remove(ref(this.db, `${userId}/cards/${card.id}`));
+  }
+
+  syncCards(userId, onUpdate) {
+    const query = ref(this.db, `${userId}/cards`);
+    onValue(query, (snapshot) => {
+      const value = snapshot.val();
+      value && onUpdate(value);
+    });
+    // off함수를 호출하는 함수
+    return () => off(query);
   }
 }
 
