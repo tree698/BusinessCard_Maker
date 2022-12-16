@@ -16,7 +16,7 @@ HTML, CSS, JavaScript, React, React Route, PostCSS, Cloudinary and Firebase
 - Finally, a business card will be created.
 
 ## 🌟 Development
-[https://businesscard-duckanoo-22e7ba.netlify.app](https://businesscard-duckanoo-22e7ba.netlify.app)
+[https://make-my-business-card.netlify.app](https://make-my-business-card.netlify.app)
 
 |**(Screenshot) Login & Logout**|
 |:--:|
