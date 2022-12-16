@@ -4,7 +4,7 @@ class ImageUploader {
     data.append('file', file);
     data.append('upload_preset', 'hwmq0jxv');
     const result = await fetch(
-      'http://api.cloudinary.com/v1_1/dea5jeo2i/upload',
+      'https://api.cloudinary.com/v1_1/dea5jeo2i/upload',
       {
         method: 'POST',
         body: data,
